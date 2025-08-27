@@ -1,0 +1,14 @@
+{
+  "name": "buro",
+  "version": "1.0.0",
+  "main": "ingreso.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.3.0"
+  }
+}
