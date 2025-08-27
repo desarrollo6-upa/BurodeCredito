@@ -11,12 +11,20 @@ export async function consultarBuro(page, dpi) {
     // Esperar 5 segundos
     await page.waitForTimeout(4000);
     // Verificar si apareció "Usuario sin obligaciones"
-    const noObligaciones = page.getByText('Usuario sin obligaciones');
-    if (await noObligaciones.count() > 0) {
+    const sinRegistros = page.getByText('Sin registros disponibles').first();
+    const oblig = page.getByText('Usuario sin obligaciones').first();
+
+    if (await sinRegistros.count() > 0) {
+        console.log(`DPI ${dpi}: es incorrecto`);
+    } else if (await oblig.count() > 0) {
         console.log(`DPI ${dpi}: No tiene obligaciones`);
     } else {
         console.log(`DPI ${dpi}: BURO DPI consultado`);
     }
 }
 
+//Termina la consulta
+
+
+//Termina la consulta
 //Termina la consulta
