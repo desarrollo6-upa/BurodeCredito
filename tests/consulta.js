@@ -18,3 +18,5 @@ export async function consultarBuro(page, dpi) {
         console.log(`DPI ${dpi}: BURO DPI consultado`);
     }
 }
+
+//Termina la consulta
